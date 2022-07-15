@@ -8,7 +8,7 @@ STUDENT, ADMINっていうroleをわけてSTUDENTならCOURSE＿WRITE,COURSE＿R
 1.ユーザー名とパスワードを入力します。
 - ユーザー名=Jhon(ADMIN),Smith(STUDENT)
 - パスワード=jhon123,smith123
-STUDENTとしてログインしたらデータは見えません。
+- STUDENTとしてログインしたらデータは見えません。
 ![image](https://user-images.githubusercontent.com/51205058/179034221-558a9ab8-7d75-4229-9af0-19f97d038a9a.png)
 2.ログインできたら学生のデータを見えます。
 ![image](https://user-images.githubusercontent.com/51205058/179034408-87eaad63-dbe2-46df-95f3-a52af8cfc796.png)
