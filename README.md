@@ -1,5 +1,5 @@
 # どのようなアプリケーションか？
-このプロジェクトはSpring Securityを使って開発したプロジェクトでございます。Spring Securityで認証方式を開発しました。ユーザー名とパスワードを入力してログインできます
+このプロジェクトはSpring Securityを使って開発したプロジェクトでございます。Spring Securityで認証方式を開発しました。ユーザー名とパスワードを入力してログインできます。
 STUDENT, ADMINっていうroleをわけてSTUDENTならCOURSE＿WRITE,COURSE＿READ<STUDENT_WRITE,STUDENT＿READなどをできません。
 
 # 動作する環境（Javaのバージョン）
