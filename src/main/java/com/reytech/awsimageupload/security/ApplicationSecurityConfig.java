@@ -32,10 +32,10 @@ public class ApplicationSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/","index","/css/*","/js*/")
                 .permitAll()
                 .antMatchers("/api/**").hasRole(STUDENT.name())
-                .antMatchers(HttpMethod.DELETE,"/management/api/**").hasAuthority(ApplicationUserPermission.COURSE_WRITE.name())
-                .antMatchers(HttpMethod.PUT,"/management/api/**").hasAuthority(ApplicationUserPermission.COURSE_WRITE.name())
-                .antMatchers(HttpMethod.POST,"/management/api/**").hasAuthority(ApplicationUserPermission.COURSE_WRITE.name())
-                .antMatchers("/management/apo/**").hasAnyRole(ADMIN.name(),ADMINTRAINEE.name())
+                .antMatchers(HttpMethod.DELETE,"/management/api/**").hasAnyRole(ADMIN.name(),ADMINTRAINEE.name())
+                .antMatchers(HttpMethod.POST,"/management/api/**").hasAnyRole(ADMIN.name(),ADMINTRAINEE.name())
+                .antMatchers(HttpMethod.PUT,"/management/api/**").hasAnyRole(ADMIN.name(),ADMINTRAINEE.name())
+                .antMatchers(HttpMethod.GET,"/management/api/**").hasAnyRole(ADMIN.name(),ADMINTRAINEE.name())
                 .anyRequest()
                 .authenticated()
                 .and()
@@ -45,11 +45,11 @@ public class ApplicationSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     @Bean
     protected UserDetailsService userDetailsService() {
-        UserDetails llks = User.builder().username("llks").password(passwordEncoder.encode("llks123")).roles(ADMIN.name()).build();
-        UserDetails sth = User.builder().username("sth").password(passwordEncoder.encode("sth123")).roles(STUDENT.name()).build();
-        UserDetails chaw = User.builder().username("chaw").password(passwordEncoder.encode("chaw123")).roles(ADMINTRAINEE.name()).build();
+        UserDetails Jhon = User.builder().username("jhon").password(passwordEncoder.encode("jhon123")).authorities(ADMIN.getGrantedAuthority()).build();
+        UserDetails Smith= User.builder().username("smith").password(passwordEncoder.encode("smith123")).authorities(STUDENT.getGrantedAuthority()).build();
+        UserDetails Jane = User.builder().username("jane").password(passwordEncoder.encode("jane123")).authorities(ADMINTRAINEE.getGrantedAuthority()).build();
         return new InMemoryUserDetailsManager(
-                llks,sth,chaw
+                Jhon,Smith,Jane
         );
  }
 }
