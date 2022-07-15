@@ -6,8 +6,8 @@ STUDENT, ADMINっていうroleをわけてSTUDENTならCOURSE＿WRITE,COURSE＿R
 11 Oracale OpenJDK version 18.0.1
 # 起動するための手順（Spring Bootの起動）
 1.ユーザー名とパスワードを入力します。
-ユーザー名=Jhon(ADMIN),Smith(STUDENT)
-パスワード=jhon123,smith123
+- ユーザー名=Jhon(ADMIN),Smith(STUDENT)
+- パスワード=jhon123,smith123
 STUDENTとしてログインしたらデータは見えません。
 ![image](https://user-images.githubusercontent.com/51205058/179034221-558a9ab8-7d75-4229-9af0-19f97d038a9a.png)
 2.ログインできたら学生のデータを見えます。
